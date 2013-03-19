@@ -11,7 +11,7 @@ XS-Ruby-Versions: all
 Package: ruby-jsduck
 Architecture: all
 XB-Ruby-Versions: ${ruby:Versions}
-Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter, ruby-json, ruby-rdiscount, ruby-dimensions, ruby-parallel
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter, ruby-json, ruby-rdiscount, ruby-dimensions, ruby-parallel, ruby-execjs
 Recommends: libjs-extjs
 Description: Simple JavaScript Duckumentation generator
  Documentation generator for Sencha JS frameworks
