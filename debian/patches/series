@@ -1,0 +1,4 @@
+root-usr-share
+drop-require-rubygems
+execjs
+disable-parallel

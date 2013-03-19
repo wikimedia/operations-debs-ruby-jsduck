@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --buildsystem=ruby --with ruby
+
+override_dh_auto_install:
+	dh_auto_install
+	# delete useless ambiguously named binaries
+	rm -f debian/ruby-jsduck/usr/bin/compare
+	rm -f debian/ruby-jsduck/usr/bin/graph
+	# put template-min in place
+	mkdir -p debian/ruby-jsduck/usr/share/ruby-jsduck/
+	cp -r  template-min/ debian/ruby-jsduck/usr/share/ruby-jsduck/
+	rm -f  debian/ruby-jsduck/usr/share/ruby-jsduck/template-min/README.md
+	rm -rf debian/ruby-jsduck/usr/share/ruby-jsduck/template-min/extjs
+	ln -s  /usr/share/javascript/extjs/ \
+		debian/ruby-jsduck/usr/share/ruby-jsduck/template-min/extjs
+
+.PHONY: override_dh_auto_install

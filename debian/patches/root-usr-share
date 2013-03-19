@@ -1,0 +1,19 @@
+Description: set /usr/share/ruby-jsduck as the root_dir
+  At least two subdirectories of root_dir are being used (template-min &
+  js-classes). The current value was very gem-specific and in the package it
+  was set to "/usr/lib/ruby", an obviously wrong choice. Hardcode our value,
+  this should probably be made configurable before pushing upstream.
+Author: Faidon Liambotis <faidon@wikimedia.org>
+Last-Update: 2013-03-18
+
+--- a/lib/jsduck/options.rb
++++ b/lib/jsduck/options.rb
+@@ -120,7 +120,7 @@ module JsDuck
+       @ignore_html = {}
+ 
+       # Debugging
+-      @root_dir = File.dirname(File.dirname(File.dirname(__FILE__)))
++      @root_dir = "/usr/share/ruby-jsduck"
+       @template_dir = @root_dir + "/template-min"
+       @template_links = false
+       @extjs_path = "extjs/ext-all.js"

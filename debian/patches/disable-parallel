@@ -1,0 +1,37 @@
+Description: disable the use of Parallel gem
+  The parallel gem doesn't have a copyright or license statement, so it's
+  illegal to use. Remove its calls, hurting performance but making jsduck legal
+  to use again :)
+Author: Faidon Liambotis <faidon@wikimedia.org>
+Last-Update: 2013-03-19
+
+--- a/lib/jsduck/util/parallel.rb
++++ b/lib/jsduck/util/parallel.rb
+@@ -1,5 +1,3 @@
+-require 'parallel'
+-
+ module JsDuck
+   module Util
+ 
+@@ -14,19 +12,11 @@ module JsDuck
+       end
+ 
+       def self.each(arr, &block)
+-        if @@in_processes == 0
+-          arr.each &block
+-        else
+-          ::Parallel.each(arr, {:in_processes => @@in_processes}, &block)
+-        end
++        arr.each &block
+       end
+ 
+       def self.map(arr, &block)
+-        if @@in_processes == 0
+-          arr.map &block
+-        else
+-          ::Parallel.map(arr, {:in_processes => @@in_processes}, &block)
+-        end
++        arr.map &block
+       end
+     end
+ 
