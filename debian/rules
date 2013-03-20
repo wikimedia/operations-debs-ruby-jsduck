@@ -11,10 +11,7 @@ override_dh_auto_install:
 	rm -f debian/ruby-jsduck/usr/bin/graph
 	# put template-min in place
 	mkdir -p debian/ruby-jsduck/usr/share/ruby-jsduck/
-	cp -r  template-min/ debian/ruby-jsduck/usr/share/ruby-jsduck/
-	rm -f  debian/ruby-jsduck/usr/share/ruby-jsduck/template-min/README.md
-	rm -rf debian/ruby-jsduck/usr/share/ruby-jsduck/template-min/extjs
-	ln -s  /usr/share/javascript/extjs/ \
-		debian/ruby-jsduck/usr/share/ruby-jsduck/template-min/extjs
+	cp -r template-min/ debian/ruby-jsduck/usr/share/ruby-jsduck/
+	rm -f debian/ruby-jsduck/usr/share/ruby-jsduck/template-min/README.md
 
 .PHONY: override_dh_auto_install
