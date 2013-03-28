@@ -1,3 +1,12 @@
+ruby-jsduck (4.7.1-1~wmf1) precise-wikimedia; urgency=low
+
+  * New upstream release.
+    - Drop patches drop-require-rubygems and execjs, merged upstream.
+  * Use embedded copy of ExtJS instead of libjs-extjs, as apparently this
+    needs a 4.x version of ExtJS that doesn't exist in Debian at all.
+
+ -- Faidon Liambotis <faidon@wikimedia.org>  Thu, 28 Mar 2013 05:58:46 +0200
+
 ruby-jsduck (4.6.2-1~wmf1) precise-wikimedia; urgency=low
 
   * Initial release.

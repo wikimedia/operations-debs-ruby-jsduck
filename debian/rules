@@ -12,6 +12,8 @@ override_dh_auto_install:
 	# put template-min in place
 	mkdir -p debian/ruby-jsduck/usr/share/ruby-jsduck/
 	cp -r template-min/ debian/ruby-jsduck/usr/share/ruby-jsduck/
+	find debian/ruby-jsduck/usr/share/ruby-jsduck/ -type f \
+		-print0 2>/dev/null | xargs -0r chmod 644
 	rm -f debian/ruby-jsduck/usr/share/ruby-jsduck/template-min/README.md
 
 .PHONY: override_dh_auto_install
