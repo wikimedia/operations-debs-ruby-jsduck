@@ -4,14 +4,14 @@ Description: set /usr/share/ruby-jsduck as the root_dir
   was set to "/usr/lib/ruby", an obviously wrong choice. Hardcode our value,
   this should probably be made configurable before pushing upstream.
 Author: Faidon Liambotis <faidon@wikimedia.org>
-Last-Update: 2013-03-18
+Last-Update: 2013-04-30
 
 --- a/lib/jsduck/options.rb
 +++ b/lib/jsduck/options.rb
 @@ -120,7 +120,7 @@ module JsDuck
-       @ignore_html = {}
  
        # Debugging
+       @warnings_exit_nonzero = false
 -      @root_dir = File.dirname(File.dirname(File.dirname(__FILE__)))
 +      @root_dir = "/usr/share/ruby-jsduck"
        @template_dir = @root_dir + "/template-min"

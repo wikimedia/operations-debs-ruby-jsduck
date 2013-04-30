@@ -1,3 +1,9 @@
+ruby-jsduck (4.8.0-1~wmf1) precise-wikimedia; urgency=low
+
+  * New upstream release.
+
+ -- Faidon Liambotis <faidon@wikimedia.org>  Tue, 30 Apr 2013 17:33:25 +0000
+
 ruby-jsduck (4.7.1-1~wmf1) precise-wikimedia; urgency=low
 
   * New upstream release.
