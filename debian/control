@@ -3,14 +3,14 @@ Section: ruby
 Priority: optional
 Maintainer: Faidon Liambotis <faidon@wikimedia.org>
 DM-Upload-Allowed: yes
-Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.3.0~)
-Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 7.0.50~), gem2deb
+Standards-Version: 3.9.5
 Homepage: https://github.com/senchalabs/jsduck
 XS-Ruby-Versions: all
 
 Package: ruby-jsduck
 Architecture: all
 XB-Ruby-Versions: ${ruby:Versions}
-Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter, ruby-json, ruby-rdiscount, ruby-dimensions, ruby-parallel, ruby-execjs
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter, ruby-json, ruby-rdiscount, ruby-dimensions, ruby-parallel, ruby-execjs, ruby-rkelly-remix
 Description: Simple JavaScript Duckumentation generator
  Documentation generator for Sencha JS frameworks
